@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.elsa.checklist.adapter.ChecklistItemAdapter;
 import com.elsa.checklist.base.BaseFragment;
 import com.elsa.checklist.databinding.FragmentChecklistBinding;
 
@@ -38,7 +40,10 @@ public class ChecklistFragment extends BaseFragment implements ChecklistContract
 
     @Override
     public void result(ArrayList<Map<String, Object>> list) {
-        binding.text.setText(String.valueOf(list));
+        ChecklistItemAdapter adapter = new ChecklistItemAdapter(list, getBaseActivity(), item -> {
+            Toast.makeText(getBaseActivity(), (String) item.get("name"), Toast.LENGTH_SHORT).show();
+        });
+        binding.itemRv.setAdapter(adapter);
     }
 
     @Override
