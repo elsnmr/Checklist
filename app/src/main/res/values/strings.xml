@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Checklist</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">login</string>
+    <string name="some_error">Sorry something went wrong!</string>
+    <string name="empty_username">Please provide a not empty username.</string>
+    <string name="empty_password">Please provide a not empty password.</string>
+</resources>
